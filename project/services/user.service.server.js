@@ -35,12 +35,12 @@ module.exports = function(app, model) {
         }));
 
     var googleConfig = {
-        // clientID     : process.env.GOOGLE_CLIENT_ID,
-        // clientSecret : process.env.GOOGLE_CLIENT_SECRET,
-        // callbackURL  : process.env.GOOGLE_CALLBACK_URL
-        clientID     : "123.apps.googleusercontent.com",
-        clientSecret : "NOTASECRET",
-        callbackURL  : "http://127.0.0.1:3000/auth/google/callback"
+        clientID     : process.env.GOOGLE_CLIENT_ID,
+        clientSecret : process.env.GOOGLE_CLIENT_SECRET,
+        callbackURL  : process.env.GOOGLE_CALLBACK_URL
+        // clientID     : "123.apps.googleusercontent.com",
+        // clientSecret : "NOTASECRET",
+        // callbackURL  : "http://127.0.0.1:3000/auth/google/callback"
     };
 
     passport.use(new GoogleStrategy(googleConfig, googleStrategy));

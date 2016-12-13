@@ -4,7 +4,7 @@
 
 <li>Allow user to register; user can either register as an Admin role or default to non-Admin role. User can also use their Google account to login. </li>
 	
-<ul>1.1Compare to non-Admin role, an Admin user has an extra session which is called the “Administrator Session”, in where the Admin user can see detailed information about all the registered users. Moreover, the Admin can also delete registered users.</ul>
+<ul>1.1 Compare to non-Admin role, an Admin user has an extra session which is called the “Administrator Session”, in where the Admin user can see detailed information about all the registered users. Moreover, the Admin can also delete registered users.</ul>
 
 <li>Each user can manage their own profile, update their information except their username.</li> 
 

@@ -9,6 +9,10 @@ var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
+if(!process.env.GOOGLE_CLIENT_ID) {
+    var env = require('../../Documents/GoogleAuthenticate');
+}
+
 app.use(session({
     secret: 'this is the secret',
     resave: true,
@@ -23,7 +27,7 @@ app.use(passport.session());
 // configure a public directory to host static content
 app.use(express.static(__dirname + '/public'));
 
-// require ("./test/app.js")(app);
+require ("./test/app.js")(app);
 //
 // require ("./assignment/app.js")(app);
 
