@@ -147,16 +147,7 @@ text-decoration: none;
     margin-bottom: 3px;
 }
 
-.input-group .form-control {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 90%;
-    margin-bottom: 0;
-}
-
-.btn-block {
-    display: block;
-    width: 91%;
+.padding-left-search-bar {
+    padding-left: 50px;
 }
 /*End Responsive Formatting for Login and Register*/

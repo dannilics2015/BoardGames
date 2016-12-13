@@ -58,7 +58,7 @@
 <div class="container">
     <!--Begin Page Heading/Breadcrumbs -->
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <h1 class="page-header">Search a game
                 <small></small>
             </h1>
@@ -68,43 +68,39 @@
                 <li class="active">Search</li>
             </ol>
         </div>
-    </div>
-    <!--End Page Heading/Breadcrumbs -->
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6">
+        <!--End Page Heading/Breadcrumbs -->
+        <div class=".col-xs-12 .col-sm-6 .col-md-8">
             <div class="input-group">
                 <input ng-model="name" type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn"><button ng-click="model.findAllCollectionsByName(name)" class="btn btn-default" type="button">Go!</button></span>
             </div>
         </div>
     </div>
-</div>
 
-<!--Begin Display Game Collection List-->
-<div class="container">
-    <table class="table">
-        <thead>
-        <tr>
-            <!--<th>Rank</th>-->
-            <!--<th>GameID</th>-->
-            <th>Username</th>
-            <th>BoardGame Name</th>
-            <th>Condition</th>
-            <th>BoardGame Image</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="collection in model.collections">
-            <td><a href="#/user/{{model.username}}/search/{{collection.username}}">{{collection.username}}</a></td>
-            <td>{{collection.name}}</a></td>
-            <td>{{collection.condition}}</a></td>
-            <td><img ng-src="{{collection.url}}" height="100px"/></td>
-        </tr>
-        </tbody>
-    </table>
+
+    <!--Begin Display Game Collection List-->
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <!--<th>Rank</th>-->
+                <!--<th>GameID</th>-->
+                <th>Username</th>
+                <th>BoardGame Name</th>
+                <th>Condition</th>
+                <th>BoardGame Image</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="collection in model.collections">
+                <td><a href="#/user/{{model.username}}/search/{{collection.username}}">{{collection.username}}</a></td>
+                <td>{{collection.name}}</a></td>
+                <td>{{collection.condition}}</a></td>
+                <td><img ng-src="{{collection.url}}" height="100px"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 <!--End Display Game Collection List-->
 

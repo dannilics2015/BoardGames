@@ -42,7 +42,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown">Trades <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#/homepage/{{model.username}}/collection"><i class="fa fa-archive" aria-hidden="true"></i> See My Collections</a></li>
-                        <li><a href="#/homepage/{{model.username}}/search.all"><i class="fa fa-hdd-o" aria-hidden="true"></i> See All Collections</a></li>
+                        <li><a href="#/homepage/{{model.username}}/search/all"><i class="fa fa-hdd-o" aria-hidden="true"></i> See All Collections</a></li>
                         <li><a href="#/homepage/{{model.username}}/search"><i class="fa fa-search-plus" aria-hidden="true"></i> Search a Collection</a></li>
                     </ul>
                 </li>
@@ -121,10 +121,9 @@
                 <a ng-click="model.createCollection()" class="btn btn-success btn-default btn-block button-space" >Create</a>
             </div>
             <div class="space">
-                <a herf="#/user/{{model.uid}}/collection" class="btn btn-danger btn-default btn-block button-space" >Cancel</a>
+                <a href="#/homepage/{{model.username}}/collection" class="btn btn-danger btn-block button-space" >Cancel</a>
             </div>
-            <!--&lt;!&ndash;button doesn't work why?&ndash;&gt;-->
-            <!--<div class="space"><button herf="#/user/{{model.uid}}/collection" class="btn btn-primary btn-default btn-block button-space" >Go Back to My Collection</button></div>-->
+            <div class="space"><a href="#/homepage/{{model.username}}/collection" class="btn btn-primary btn-default btn-block button-space" >Go Back to My Collection</a></div>
             <!--End Button-->
             <!--End Portrait View/Add Content Form-->
             <hr>

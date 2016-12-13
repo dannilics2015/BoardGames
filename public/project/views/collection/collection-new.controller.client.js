@@ -60,7 +60,7 @@
 
                     })
                     .error(function (error) {
-                        console.log("create collection error");
+                        alert("create collection error");
                     });
             }
         }

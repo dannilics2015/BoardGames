@@ -38,6 +38,7 @@
         }
 
         function updateCollection(collectionId, collection) {
+            console.log(collection.username);
             var url = "/api/" + collection.username + "/collection/" + collectionId;
             return $http.put(url, collection);
         }

@@ -62,16 +62,18 @@
             collection.price = price;
             collection.condition = condition;
             collection.url = url;
+            collection.username = vm.username;
             if(name == "") {
-                vm.error = "please enter valid website name";
+                vm.error = "please enter valid collection name";
                 return;
             }
             CollectionService.updateCollection(vm.cid, collection)
                 .success(function() {
-                    alert("Update Successfully")
+                    alert("Update Successfully");
+                    $location.url("/homepage/" + vm.username + "/collection");
                 })
                 .error(function() {
-                    console.log("create website error");
+                    alert("Update Failed");
                 })
         }
 

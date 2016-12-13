@@ -102,12 +102,7 @@ module.exports = function(app, model) {
         model.collectionModel.findAllCollectionsByName(name)
             .then(
                 function(collections){
-                    // if(websites){
                     res.send(collections);
-                    // }
-                    // else{
-                    //     res.send('0');
-                    // }
                 },
                 function(error){
                     res.sendStatus(400).send(error);
