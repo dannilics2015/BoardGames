@@ -1,10 +1,10 @@
-How to Use SeattleBoardGameCorner?
+<h1>How to Use SeattleBoardGameCorner?</h1>
 
-SeattleBoardGameCorner is a single-page, mobile-friendly web application that has following features: 
+<p>SeattleBoardGameCorner is a single-page, mobile-friendly web application that has following features: </p>
 
-1. allow user to register; user can either register as an Admin role or default to non-Admin role. User can also use their Google account to login. 
+<li>Allow user to register; user can either register as an Admin role or default to non-Admin role. User can also use their Google account to login. </li>
 	
-1.1 Compare to non-Admin role, an Admin user has an extra session which is called the “Administrator Session”, in where the Admin user can see detailed information about all the registered users. Moreover, the Admin can also delete registered users.
+<ul>Compare to non-Admin role, an Admin user has an extra session which is called the “Administrator Session”, in where the Admin user can see detailed information about all the registered users. Moreover, the Admin can also delete registered users.</ul>
 
 <li>2. Each user can manage their own profile, update their information except their username.</li> 
 
