@@ -24,7 +24,6 @@
                             <a href="#/homepage/{{model.username}}/message"><i class="fa fa-envelope" aria-hidden="true"></i> Mailbox</a></li>
                         <li>
                             <a href="#/homepage/{{model.username}}/collection"><i class="fa fa-archive" aria-hidden="true"></i> Collections</a></li>
-                        <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Trade History</a></li>
                         <li><a ng-click="model.logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a></li>
                     </ul>
                 </li>
@@ -86,20 +85,20 @@
             <h3>User Basic Info</h3>
             <p><i class="fa fa-id-card"></i>  Username: {{model.ownername}}</p>
             <p><i class="fa fa-calendar"></i>  Member Since: {{model.owner.dateCreated | date:'MM/dd/yyyy'}}</p>
-            <ul class="list-unstyled list-inline list-social-icons">
-                <li>
-                    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                </li>
-            </ul>
+            <!--<ul class="list-unstyled list-inline list-social-icons">-->
+                <!--<li>-->
+                    <!--<a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>-->
+                <!--</li>-->
+            <!--</ul>-->
         </div>
     </div>
     <!-- /.row -->
@@ -113,7 +112,7 @@
                 <div class="control-group form-group">
                     <div class="controls">
                         <label>Message:</label>
-                        <textarea ng-model="model.message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        <textarea ng-model="model.message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" placeholder="Hi, I am interested in your XXX board game and I would like to trade with any of my collections. I live in ... Would you be interested?"></textarea>
                     </div>
                 </div>
                 <div id="success"></div>

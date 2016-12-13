@@ -22,11 +22,11 @@
     padding-right: 50px;
 }
 
-.login-padding {
-    padding-top: 100px;
-    padding-left: 200px;
-    padding-right: 100px;
-}
+/*.login-padding {*/
+    /*padding-top: 100px;*/
+    /*padding-left: 200px;*/
+    /*padding-right: 100px;*/
+/*}*/
 
 
 .collection-new-padding {
@@ -137,3 +137,26 @@ text-decoration: none;
 .responsive-table {
     overflow-x:auto;
 }
+
+.form-top-padding {
+    padding-top: 100px;
+}
+
+/*Begin Responsive Formatting for Login and Register*/
+.form-group {
+    margin-bottom: 3px;
+}
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 90%;
+    margin-bottom: 0;
+}
+
+.btn-block {
+    display: block;
+    width: 91%;
+}
+/*End Responsive Formatting for Login and Register*/
