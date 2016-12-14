@@ -164,9 +164,9 @@
                     checkAdmin: checkAdmin
                 }
             })
-            .otherwise({
-                redirectTo: "/login"
-            });
+            // .otherwise({
+            //     redirectTo: "/login"
+            // });
 
         function checkLogin($q, UserService, $location) {
                 var deferred = $q.defer();

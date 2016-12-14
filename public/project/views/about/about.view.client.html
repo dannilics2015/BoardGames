@@ -38,14 +38,47 @@
 
     <!--Intro to Seattle Board Game Group-->
     <div>
-        <h3>What is Seattle Board Game Corner?</h3>
-        <p>Seattle Board Game Corner is a mobile-friendly web application that allows board game lovers to learn
-        about the current hot board games, trade their board game collections with other users'.</p>
-        <p>Users can post their collections of board games on their pages. Users can also search a certain board game by name and find out
-            which user in the Seattle area has the board game. Simply by sending a message to the game owner, users can start trade their board games
-            with other users' collections and get to play different board games without buying the game.</p>
-    </div>
+        <h2>What is Seattle Board Game Corner(SBGC)?</h2>
+        <p>SBGC is a single-page, mobile-friendly web application that allows users to trade board games with other users.</p>
+        <p>Using SBGC, users get to try out different board games without buying the games. Plus, users get to clear out their old game collections and enjoy the fun of trading with other game lovers!</p>
+        <p>Besides trading, users can search any board games by name to get information about the game; users can also retrieve the latest top 50 hotness board games(Data is obtained from a 3rd party API called BoardGameGeek API).</p>
 
+        <h2>How SBGC is Built?</h2>
+        <p>HTML, CSS, Bootstrap, FontAwesome, JavaScript and AngularJS is used to build the front end to interact directly with users. Ng-routing from Angular is used to render a dynamic single-page web app. Bootstrap and CSS are used to make the pages responsive for mobile users.
+            As users interact with the app, they will be generating a sequence of HTTP requests directed at a server built on Node.js and Express(a popular Node.js library). The server uses Mongoose to store and retrieve data model from MongoDB.</p>
+        <p>An third-party API (BoardGameGeek) is used to retrieve latest hot game and any board game info in the app. </p>
+        <p>This app supports different roles of users and they are granted different access levels.</p>
+        <p>This app also supports Google authenticated log in. </p>
+
+        <h2>How to Use SBGC?</h2>
+        <p>SBGC is easy to use and it has following features: </p>
+        <h4>1.  Allow user to register; user can either register as an Admin role or default to non-Admin role. User can also use their Google account to login. </h4>
+        <li>Compare to non-Admin role, an Admin user has an extra session which is called the “Administrator Session” in their Profile page, in where the Admin user can see detailed information about all the registered users. Moreover, the Admin can delete registered users.</li>
+
+        <h4>2.  Each user can manage their own profile, update their information except their username.</h4>
+
+        <h4>3.  After log in, user can see the homepage. In their homepage, they can navigate to all other available pages and access different features.</h4>
+        <li>First part in the Homepage will display a photo slider, showing a few interesting pictures about board games.</li>
+        <li>Second part where it says “Search”, “Hot and New”, “Trade”, they includes links that will bring users to different pages and render different views. (Continue below to read for more details)</li>
+        <li>Third part in the Homepage will call the BoardGameGeek API and display top 30 hotness board games. Each thumbnail represents a board game image, which links to a detailed page about the game. The details is also using the data retrieved from a different BoardGameGeek API call. </li>
+        <li>Fourth part is a simple information session that tells user the features that SeattleBoardGameGroup app has.</li>
+        <h4>4.  In the Homepage navigation bar at the top, there contains a several drop down menu where includes several other links that allows user to navigate to other pages and use other features. It includes: </h4>
+
+        <h5><strong>Profile drop down:</strong></h5>
+        <li>Account - brings users to their profile page;</li>
+        <li>Mailbox - displays a list of messages that the users received from other users. From there user can also reply back to other users.</li>
+        <li>Collections - bring users to their collections page, in where they can add, edit, or delete their collections. The collections they added will be accessed by other users by searching.</li>
+        <li>Sign out - allows users to sign out</li>
+
+        <h5><strong>Search drop down:</strong></h5>
+        <li>Hot - allows user to check out the latest top 50 hot board games and user can click into the game name and see details about the game, including ranking, description, image, minimum/maximum players, play time, published year, designed, publisher and artists etc.</li>
+        <li>Search - allows user to search any board game by name and learn more about the game. This feature uses BoardGameGeek API call to retrieve available data from BoardGameGeek</li>
+
+        <h5><strong>Trades</strong></h5>
+        <li>See My Collections - will display a list of collections that users added(if any). From there, user can click “Add a New Collection” to add a new collection; user can click on “View Collection”(if has any) to manage the collection they added. User can update the game name, description, brought price, condition(if it is used, new) and image.</li>
+        <li>See All Collections - will retrieve a list all collections that are available for trading. The displaying data will include a username(which indicates the username of the game owner), name of the board game, condition, image and description. User can click on “Username”, it will brings user to the game owner’s contact page. The Contact page will show basic information about the game owner; also, user can type in their message in the message box and send it to the game owner.</li>
+        <li>Search a Collection - If users have a board game in mind, they can search by the name of the board game and if there is any users have the game, the result will be displayed. Again, user can click on the name of the game owner and leave them message.</li>
+    </div>
 
     <hr>
 

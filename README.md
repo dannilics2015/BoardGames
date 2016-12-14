@@ -1,8 +1,8 @@
 <h2>What is SeattleBoardGameCorner(SBGC)?</h2>
 
 <p>SBGC is a single-page, mobile-friendly web application that allows users to trade board games with other users.</p>
-<p>Using SBGC, users get to try out different board games without buying the game. Plus, users get to clear out their old game collections and enjoy the fun of trading with other game lovers!</p>
-<p>Besides trading, users can also search any board games by name, to retrieve information about the game; users can also search the latest top 50 hotness board games(Data is retrieve from a 3rd party API called BoardGameGeek API).</p>
+<p>Using SBGC, users get to try out different board games without buying the games. Plus, users get to clear out their old game collections and enjoy the fun of trading with other game lovers!</p>
+<p>Besides trading, users can search any board games by name, to retrieve information about the game; users can also retrieve the latest top 50 hotness board games(Data is obtained from a 3rd party API called BoardGameGeek API).</p>
 
 
 <h2>How to Use SBGC?</h2>
