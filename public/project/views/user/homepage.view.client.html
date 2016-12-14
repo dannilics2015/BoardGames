@@ -55,7 +55,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown">Search <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#/homepage/{{model.user.username}}/hot"><i class="fa fa-fire" aria-hidden="true"></i> Hot</a></li>
-                        <li><a href="#/homepage/{{model.username}}/boardgames/search"><i class="fa fa-search" aria-hidden="true"></i> Find a Game</a></li>
+                        <li><a href="#/homepage/{{model.user.username}}/boardgames/search"><i class="fa fa-search" aria-hidden="true"></i> Find a Game</a></li>
                     </ul>
                 </li>
                 <!--End Search Dropdown-->
@@ -129,9 +129,9 @@
     <!--Begin Hot Games Display -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Recent Hot Games <small><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
-                <span class="sr-only"> Loading...</span></small></h2>
+            <h2 class="page-header">Recent Hot Games <small></small></h2>
         </div>
+        <div ng-show="model.loading"><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i></div>
         <div class="col-md-2 col-sm-4" ng-repeat="game in model.games | limitTo:30">
             <a href="#/user/homepage/{{model.user.username}}/page/{{game.gameId}}">
                 <img class="img-responsive img-portfolio img-hover" ng-src="{{game.thumbnail}}"/></a>

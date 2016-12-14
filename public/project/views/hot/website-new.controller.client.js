@@ -17,10 +17,12 @@
 
         //when page load will display top 50 games immediately
         function init() {
+            vm.loading = true;
             var url = "https://bgg-json.azurewebsites.net/hot";
             $http.get(url)
                 .success(function(result) {
                     vm.games = result;
+                    vm.loading = false;
                 });
 
             findUserByUsername();
@@ -29,6 +31,7 @@
         init();
 
         function searchGameByName(name) {
+            vm.loading = true;
             var url = "https://bgg-api.herokuapp.com/api/v1/search?query=" + name + "&&type=boardgame&&exact=1";
             $http.get(url)
                 .success(function(result) {
@@ -38,6 +41,7 @@
                         $http.get(url)
                             .success(function(results) {
                                 vm.searchResults = results;
+                                vm.loading = false;
                             });
                     }
                     else {

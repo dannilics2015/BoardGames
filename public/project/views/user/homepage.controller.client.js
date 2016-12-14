@@ -13,8 +13,8 @@
         vm.logout = logout;
 
         function init() {
+            vm.loading = true;
             UserService
-                // .findUserById(userId)
                 .findCurrentUser()
                 .success(function (user) {
                     if (user != '0') {
@@ -29,6 +29,7 @@
             $http.get(url)
                 .success(function(result) {
                     vm.games = result;
+                    vm.loading = false;
                 });
 
         }

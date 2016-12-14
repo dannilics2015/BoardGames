@@ -60,9 +60,10 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">50 Hottest Board Games
-                <small>Loading could take a minute. Click on Name for More Details</small></h1>
+                <small>Click on Name for More Details</small></h2></small></h1>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-12">
             <ol class="breadcrumb">
@@ -72,7 +73,9 @@
             </ol>
         </div>
     </div>
-
+    <!--Begin Loading-->
+    <div ng-show="model.loading"><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i></div>
+    <!--End Loading-->
     <!--End Page Heading/Breadcrumbs -->
 
     <!--Begin Display Game List-->

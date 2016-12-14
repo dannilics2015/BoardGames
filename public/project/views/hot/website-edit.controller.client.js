@@ -18,10 +18,12 @@
         vm.logout = logout;
 
         function init() {
+            vm.loading = true;
             var url="https://bgg-json.azurewebsites.net/thing/" + gameId;
             $http.get(url)
                 .success(function(result) {
                     vm.detail = result;
+                    vm.loading = false;
                 });
         }
         init();
