@@ -34,6 +34,8 @@
 
 <ul>4.2.1 Hot - allows user to check out the latest top 50 hot board games and user can click into the game name and see details about the game, including ranking, description, image, minimum/maximum players, play time, published year, designed, publisher and artists etc.</ul> 
 
+<ul>4.2.2 Search - allows user to search any board game by name and learn more about the game. This feature uses BoardGameGeek API call to retrieve available board game data from BoardGameGeek</ul> 
+
 <ul>4.3 Trades</ul> 
 
 <ul>4.3.1 See My Collections - will display a list of collections that users added(if any). From there, user can click “Add a New Collection” to add a new collection; user can click on “View Collection”(if has any) to manage the collection they added. User can update the game name, description, brought price, condition(if it is used, new) and image.</ul>  
