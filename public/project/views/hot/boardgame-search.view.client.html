@@ -54,17 +54,15 @@
 <!--End navigation bar-->
 <!-- Page Content -->
 <div class="container">
-
     <!--Begin Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Game Details
-                <small>find out more about the game</small>
+            <h2 class="page-header">Search a Board Game
+                <small>find out more details about the game</small>
             </h2>
             <ol class="breadcrumb">
                 <li><a href="#/homepage/{{model.username}}">Home</a></li>
-                <li><a href="#/homepage/{{model.username}}/hot">Hot</a></li>
-                <li class="active">trade</li>
+                <li class="active">Search a game</li>
             </ol>
         </div>
     </div>
@@ -73,63 +71,68 @@
 
 
     <h1>{{model.detail.name}}</h1>
+
+    <!--Begin Search Bar-->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+            <span class="input-group-btn">
+                <input ng-model="model.gamename" type="text" class="form-control" placeholder="Search for...">
+                <a ng-click="model.searchGameByName(model.gamename)" class="btn btn-default"  type="button">Go!</a></span>
+            </div><!-- /input-group -->
+        </div>
+    </div>
+    <!--End Search Bar-->
+
+    <!--Begin Result Display-->
+    <h2>
+        <td>{{model.searchResults.name}}</td>
+    </h2>
+    <div class="table-responsive">
     <table class="table table-striped">
         <tbody>
+
         <tr>
             <td>Rank:</td>
-            <td>{{model.detail.rank}}</td>
+            <td>{{model.searchResults.rank}}</td>
         </tr>
         <tr>
             <td>Description:</td>
-            <td>{{model.detail.description}}</td>
+            <td>{{model.searchResults.description}}</td>
         </tr>
         <tr>
             <td>Image:</td>
-            <td><img ng-src="{{model.detail.image}}" height="300px"/></td>
+            <td><img ng-src="{{model.searchResults.image}}" height="300px"/></td>
         </tr>
         <tr>
             <td>Minimum Players:</td>
-            <td>{{model.detail.minPlayers}}</td>
+            <td>{{model.searchResults.minPlayers}}</td>
         </tr>
         <tr>
             <td>Maximum Players:</td>
-            <td>{{model.detail.maxPlayers}}</td>
+            <td>{{model.searchResults.maxPlayers}}</td>
         </tr>
         <tr>
             <td>Playing Time:</td>
-            <td>{{model.detail.playingTime}}</td>
+            <td>{{model.searchResults.playingTime}}</td>
         </tr>
         <tr>
             <th>Is Expansion:</th>
-            <td>{{model.detail.isExpansion}}</td>
+            <td>{{model.searchResults.isExpansion}}</td>
         </tr>
         <tr>
             <th>Mechanics:</th>
             <!--<td ng-repeat="mechanic in model.detail.mechanics">{{mechanic}}</td>-->
-            <td>{{model.detail.mechanics}}</td>
+            <td>{{model.searchResults.mechanics}}</td>
         </tr>
         <tr>
             <td>Published Year:</td>
-            <td>{{model.detail.yearPublished}}</td>
-        </tr>
-        <tr>
-            <td>Designer:</td>
-            <!--<td ng-repeat="designer in model.detail.designers">{{designer}}</td>-->
-            <td>{{model.detail.designers}}</td>
-        </tr>
-        <tr>
-            <td>Publishers:</td>
-            <!--<td ng-repeat="publisher in model.detail.publishers">{{publisher}}</td >-->
-            <td>{{model.detail.publishers}}</td>
-        </tr>
-        <tr>
-            <td>Artists:</td>
-            <!--<td ng-repeat="artist in model.detail.artists">{{artist}}</td>-->
-            <td>{{model.detail.artists}}</td>
+            <td>{{model.searchResults.yearPublished}}</td>
         </tr>
         </tbody>
     </table>
-
+    </div>
+    <!--End Result Display-->
     <hr>
     <!-- Footer -->
     <footer>

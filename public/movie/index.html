@@ -10,6 +10,7 @@
 <body>
 <div class="container-fluid" ng-controller="MovieSearchController as model">
     <h1>Movie Application</h1>
+    {{model.movies.items.item[0].$.id}}
 
     <div class="input-group">
         <input ng-model="title" type="text" class="form-control" placeholder="Search for...">
@@ -26,10 +27,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="movie in model.movies">
-            <td>{{movie.Title}}</td>
-            <td>{{movie.Year}}</td>
-            <td><img ng-src="{{movie.Poster}}"/></td>
+        <tr>
+            <td>{{model.movie.name}}</td>
+            <td>{{model.movie.Year}}</td>
+            <td><img ng-src="{{model.movie.thumbnail}}"/></td>
         </tr>
         </tbody>
     </table>

@@ -28,7 +28,6 @@
 
         function findAllCollectionsForUser(username) {
             var url = "/api/user/" + username+ "/collection";
-            // var url = "/api/user/website";
             return $http.get(url);
         }
 

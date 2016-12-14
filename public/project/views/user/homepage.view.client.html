@@ -55,7 +55,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown">Search <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#/homepage/{{model.user.username}}/hot"><i class="fa fa-fire" aria-hidden="true"></i> Hot</a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Find a Game</a></li>
+                        <li><a href="#/homepage/{{model.username}}/boardgames/search"><i class="fa fa-search" aria-hidden="true"></i> Find a Game</a></li>
                     </ul>
                 </li>
                 <!--End Search Dropdown-->
@@ -86,24 +86,26 @@
                 Welcome {{model.user.username}} !
             </h1>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-check"></i> Home</h4>
+                    <h4><i class="fa fa-fw fa-search"></i> Search</h4>
                 </div>
                 <div class="panel-body">
                     <p>Here you will learn more about the website app and how to utilize every resource in this app</p>
-                    <a href="#/homepage/{{model.user.username}}" class="btn btn-default">Learn More</a>
+                    <a href="#/homepage/{{model.user.username}}/boardgames/search" class="btn btn-default">Learn More</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-gift"></i> Hot and New</h4>
+                    <h4><i class="fa fa-fw fa-fire"></i> Hot and New</h4>
                 </div>
                 <div class="panel-body">
-                    <p>Here you will find out what is new and what popular board games other people are playing</p>
+                    <p>Here you can search any board game by name and learn more details about the games</p>
                     <!--<a href="#/user/{{model.uid}}/homepage/page" class="btn btn-default">Learn More</a>-->
                     <a href="#/homepage/{{model.user.username}}/hot" class="btn btn-default">Learn More</a>
 
@@ -113,7 +115,7 @@
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-compass"></i> Trade</h4>
+                    <h4><i class="fa fa-fw fa-suitcase"></i> Trade</h4>
                 </div>
                 <div class="panel-body">
                     <p>Here you will find out what interesting board game other users may have and trade with them</p>
@@ -142,19 +144,19 @@
         <div class="col-lg-12">
             <h2 class="page-header">Seattle Board Game Group Features</h2>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <p>Features includes:</p>
             <ul>
                 <li><strong>Trade Board Games with Others</strong></li>
                 <li>Mange Your Own Game Collections</li>
-                <li>Search the Hot Board Games</li>
+                <li>Search the Hot Board Games/Any Board Games</li>
                 <li>See What Other Users Have in Their Collections</li>
-                <li>Communicate with Other Users Through Message Box</li>
+                <li>Message Other Users to Trade Board Games</li>
             </ul>
-            <p>Now, start searching and find yourself a new board game to play without buying it.</p>
+            <p>Now, start searching and finding yourself a new board game to play without buying it.</p>
             <p>Plus, you get to get rid of your old game! Enjoy!</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <img class="img-responsive pull-right" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkgchCfF15GZlIaDVzwZSaKHzSOKHeY7NnuphqUN1KKZQslVmq" ng-style="{'border':'solid 2px black'}"alt="">
         </div>
     </div>

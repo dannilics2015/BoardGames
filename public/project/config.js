@@ -86,6 +86,15 @@
                     checkLogin: checkLogin
                 }
             })
+            //login user search any board game to get info
+            .when("/homepage/:username/boardgames/search", {
+                templateUrl: "views/hot/boardgame-search.view.client.html",
+                controller: "WebsiteNewController",
+                controllerAs: "model",
+                resolve: {
+                    checkLogin: checkLogin
+                }
+            })
             //check other user profile
             .when("/user/:username/search/:ownername", {
                 templateUrl: "views/user/user.view.client.html",

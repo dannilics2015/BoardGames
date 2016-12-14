@@ -33,7 +33,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown">Search <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#/homepage/{{model.username}}/hot"><i class="fa fa-fire" aria-hidden="true"></i> Hot</a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Find a Game</a></li>
+                        <li><a href="#/homepage/{{model.username}}/boardgames/search"><i class="fa fa-search" aria-hidden="true"></i> Find a Game</a></li>
                     </ul>
                 </li>
                 <!--End Search Dropdown-->
@@ -59,8 +59,8 @@
     <!--Begin Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-md-12">
-            <h1 class="page-header">Search a game
-                <small></small>
+            <h1 class="page-header">Search a Board Game
+                <small>find out who has it</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#/homepage/{{model.username}}">Home</a></li>
@@ -68,8 +68,10 @@
                 <li class="active">Search</li>
             </ol>
         </div>
+    </div>
         <!--End Page Heading/Breadcrumbs -->
-        <div class=".col-xs-12 .col-sm-6 .col-md-8">
+    <div class="row">
+        <div class="col-lg-6">
             <div class="input-group">
                 <input ng-model="name" type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn"><button ng-click="model.findAllCollectionsByName(name)" class="btn btn-default" type="button">Go!</button></span>
@@ -83,8 +85,6 @@
         <table class="table">
             <thead>
             <tr>
-                <!--<th>Rank</th>-->
-                <!--<th>GameID</th>-->
                 <th>Username</th>
                 <th>BoardGame Name</th>
                 <th>Condition</th>

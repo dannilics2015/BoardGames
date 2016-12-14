@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">Seattle Board Game Group</a>
+            <div class="navbar-brand">Seattle Board Game Group</div>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -86,20 +86,10 @@
             <h3>User Basic Info</h3>
             <p><i class="fa fa-id-card"></i>  Username: {{model.ownername}}</p>
             <p><i class="fa fa-calendar"></i>  Member Since: {{model.owner.dateCreated | date:'MM/dd/yyyy'}}</p>
-            <!--<ul class="list-unstyled list-inline list-social-icons">-->
-                <!--<li>-->
-                    <!--<a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>-->
-                <!--</li>-->
-            <!--</ul>-->
+            <h3>User Collections List</h3>
+            <ul class="list-unstyled list-inline list-social-icons" ng-repeat="collect in model.owner.collections">
+                <li>{{collect.name}}</li>
+            </ul>
         </div>
     </div>
     <!-- /.row -->
@@ -113,7 +103,7 @@
                 <div class="control-group form-group">
                     <div class="controls">
                         <label>Message:</label>
-                        <textarea ng-model="model.message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" placeholder="Hi, I am interested in your XXX board game and I would like to trade w"></textarea>
+                        <textarea ng-model="model.message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" placeholder="Hi, I am interested in your XXX board game and I would like to trade any of my collections with your XXX. Would you be interested?"></textarea>
                     </div>
                 </div>
                 <div id="success"></div>

@@ -7,11 +7,11 @@
         .module("WebAppMaker")
         .controller("WebsiteNewController", WebsiteNewController);
 
-    function WebsiteNewController($routeParams, WebsiteService, $location, $http, UserService) {
+    function WebsiteNewController($routeParams, $location, $http, UserService) {
         var vm = this;
 
         vm.username = $routeParams.username;
-
+        vm.searchGameByName = searchGameByName;
         vm.logout = logout;
 
 
@@ -29,11 +29,20 @@
         init();
 
         function searchGameByName(name) {
-            var url = "http://bgg-api.herokuapp.com/api/v1/search?query=" + name;
+            var url = "http://bgg-api.herokuapp.com/api/v1/search?query=" + name + "&&type=boardgame&&exact=1";
             $http.get(url)
                 .success(function(result) {
-                    vm.game = result.items.item;
-                    console.log(result.items.item);
+                    if(result.items.$.total != 0) {
+                        vm.gameID = result.items.item[0].$.id;
+                        var url="https://bgg-json.azurewebsites.net/thing/" + vm.gameID;
+                        $http.get(url)
+                            .success(function(results) {
+                                vm.searchResults = results;
+                            });
+                    }
+                    else {
+                        alert("No Results Found");
+                    }
                 });
         }
 
