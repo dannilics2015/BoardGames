@@ -1,6 +1,13 @@
-<h2>How to Use SeattleBoardGameCorner?</h2>
+<h2>What is SeattleBoardGameCorner?</h2>
 
-<p>SeattleBoardGameCorner is a single-page, mobile-friendly web application that has following features: </p>
+<p>SeattleBoardGameCorner(SBGC) is a single-page, mobile-friendly web application that allows users to trade board games with other users.</p>
+<p>Using SBGC, users get to try out different board games without buying the game. Plus, users get to clear out their old game collections and enjoy the fun of trading with other game lovers!</p>
+<p>Besides trading, users can also search any board games by name, to retrieve information about the game; users can also search the latest top 50 hotness board games. (Data is retrieve from a 3rd party API called BoardGameGeek API</p>
+
+
+<h2>How to Use SBGC?</h2>
+
+<p>SBGC is easy to use and it has following features: </p>
 
 <li>Allow user to register; user can either register as an Admin role or default to non-Admin role. User can also use their Google account to login. </li>
 	
@@ -44,7 +51,7 @@
 
 <ul>4.3.3 Search a Collection - If users have a board game in mind, they can search by the name of the board game and if there is any users have the game, the result will be displayed. Again, user can click on the name of the game owner and leave them message.</ul>  
  
-<h2>How SeattleBoardGameCorner is Built?</h2> 
+<h2>How SBGC is Built?</h2> 
 
 <p>HTML, CSS, Bootstrap, FontAwesome, JavaScript and AngularJS is used to build the front end to interact directly with users. Ng-routing from Angular is used to render a dynamic single-page web app. Bootstrap and CSS are used to make the pages responsive for mobile users. 
 As users interact with the app, they will be generating a sequence of HTTP requests directed at a server built on Node.js and Express(a popular Node.js library). The server uses Mongoose to store and retrieve data model from MongoDB.</p>
