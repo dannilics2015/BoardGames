@@ -13,6 +13,9 @@
         vm.register = register;
 
         function register(user) {
+            if(vm.username == "") {
+                vm.error = "Invalid input";
+            }
             if(vm.password != vm.passwordVerify) {
                 vm.error = "Your password doesn't match";
             }
@@ -23,7 +26,7 @@
                         $location.url("/user");
                     })
                     .error(function (error) {
-                        alert("Error! Please check your input field");
+                        alert("Invalid input! Please check your input field");
                     })
             }
         }
