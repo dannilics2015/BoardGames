@@ -23,7 +23,7 @@
                         $location.url("/user");
                     })
                     .error(function (error) {
-                        vm.error("Username already taken")
+                        alert("Error! Please check your input field");
                     })
             }
         }

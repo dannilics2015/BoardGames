@@ -23,7 +23,7 @@
                     }
             })
                 .error(function () {
-                    vm.error = "Password doesn't match"
+                    alert("Error! Please check your input field");
                 });
         }
     }
