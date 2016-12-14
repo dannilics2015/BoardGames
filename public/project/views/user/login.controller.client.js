@@ -24,7 +24,6 @@
             })
                 .error(function () {
                     vm.error = "Password doesn't match"
-                    console.log("login error");
                 });
         }
     }

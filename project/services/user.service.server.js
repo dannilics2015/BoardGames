@@ -38,9 +38,6 @@ module.exports = function(app, model) {
         clientID     : process.env.GOOGLE_CLIENT_ID,
         clientSecret : process.env.GOOGLE_CLIENT_SECRET,
         callbackURL  : process.env.GOOGLE_CALLBACK_URL
-        // clientID     : "123.apps.googleusercontent.com",
-        // clientSecret : "NOTASECRET",
-        // callbackURL  : "http://127.0.0.1:3000/auth/google/callback"
     };
 
     passport.use(new GoogleStrategy(googleConfig, googleStrategy));
@@ -48,7 +45,6 @@ module.exports = function(app, model) {
 
     app.post('/api/user', createUser);
     app.get('/api/user', findUser);
-    // app.get('/api/user/:uid', findUserById);
     app.get('/api/user/:username', findUserByUsername);
     app.put('/api/user/:uid', authenticate, updateUser);
     app.delete('/api/user/:uid', authenticate, deleteUser);
@@ -206,14 +202,9 @@ module.exports = function(app, model) {
     function localStrategy(username, password, done) {
         model
             .userModel
-            // .findUserByCredentials(username, password)
             .findUserByUsername(username)
             .then(
                 function (user) {
-                    // if (!user) {
-                    //     return done(null, false);
-                    // }
-                    // return done(null, user);
                     if(user && bcrypt.compareSync(password, user.password)) {
                         return done(null, user);
                     } else {

@@ -29,7 +29,7 @@
         init();
 
         function searchGameByName(name) {
-            var url = "http://bgg-api.herokuapp.com/api/v1/search?query=" + name + "&&type=boardgame&&exact=1";
+            var url = "https://bgg-api.herokuapp.com/api/v1/search?query=" + name + "&&type=boardgame&&exact=1";
             $http.get(url)
                 .success(function(result) {
                     if(result.items.$.total != 0) {
