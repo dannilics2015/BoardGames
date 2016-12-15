@@ -46,6 +46,7 @@
                     }
                     else {
                         alert("No Results Found");
+                        vm.loading = false;
                     }
                 });
         }
