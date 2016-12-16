@@ -7,12 +7,14 @@
         .module("WebAppMaker")
         .controller("WebsiteNewController", WebsiteNewController);
 
-    function WebsiteNewController($routeParams, $location, $http, UserService) {
+    function WebsiteNewController($routeParams, $location, $http, UserService, $sce) {
         var vm = this;
 
         vm.username = $routeParams.username;
         vm.searchGameByName = searchGameByName;
         vm.logout = logout;
+
+        vm.checkSafeHtml = checkSafeHtml;
 
 
         //when page load will display top 50 games immediately
@@ -71,6 +73,10 @@
                 .success(function(){
                     $location.url("/login");
                 });
+        }
+
+        function checkSafeHtml(html) {
+            return $sce.trustAsHtml(html);
         }
     }
 })();

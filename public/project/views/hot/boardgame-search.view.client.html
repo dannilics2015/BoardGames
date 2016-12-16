@@ -99,7 +99,7 @@
         </tr>
         <tr>
             <td>Description:</td>
-            <td>{{model.searchResults.description}}</td>
+            <td><div ng-bind-html= "model.checkSafeHtml(model.searchResults.description)"></div></td>
         </tr>
         <tr>
             <td>Image:</td>
