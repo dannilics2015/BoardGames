@@ -84,7 +84,7 @@
         </tr>
         <tr>
             <td>Description:</td>
-            <td>{{model.detail.description}}</td>
+            <td><div ng-bind-html= "model.checkSafeHtml(model.detail.description)"></div></td>
         </tr>
         <tr>
             <td>Image:</td>

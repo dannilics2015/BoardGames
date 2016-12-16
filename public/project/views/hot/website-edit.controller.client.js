@@ -7,7 +7,7 @@
         .module("WebAppMaker")
         .controller("WebsiteEditController", WebsiteEditController);
 
-    function WebsiteEditController($routeParams, $http, UserService, $location) {
+    function WebsiteEditController($routeParams, $http, UserService, $location, $sce) {
         var vm = this;
 
         vm.username = $routeParams.username;
@@ -16,6 +16,7 @@
         vm.gameId = gameId;
 
         vm.logout = logout;
+        vm.checkSafeHtml = checkSafeHtml;
 
         function init() {
             vm.loading = true;
@@ -35,5 +36,8 @@
                 });
         }
 
+        function checkSafeHtml(html) {
+            return $sce.trustAsHtml(html);
+        }
     }
 })()
